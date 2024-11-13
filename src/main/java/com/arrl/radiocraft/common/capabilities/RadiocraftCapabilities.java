@@ -26,6 +26,7 @@ public class RadiocraftCapabilities {
 		event.registerBlock(ANTENNA_NETWORKS, (level, pos, state, be, side) -> new AntennaNetworkCapability(), RadiocraftBlocks.HF_RADIO_10M.get());
 
 		event.registerItem(VHF_HANDHELDS, (itemStack, context) -> new VHFHandheldCapability(), RadiocraftItems.VHF_HANDHELD.get());
+		event.registerItem(Capabilities.EnergyStorage.ITEM, (itemStack, context) -> new BatteryCapability(itemStack), RadiocraftItems.SMALL_BATTERY.get());
 
 		event.registerEntity(ANTENNA_WIRE_HOLDERS, EntityType.PLAYER, (myEntity, context) -> new AntennaWireHolderCapability());
 	}
